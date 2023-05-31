@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Source Code Pro", monospace;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.container {
+  background-color: #2c2c2c;
+  max-width: 49%;
+  border-radius: 30px;
+}
+
+.input-container {
+  padding: 50px 30px;
+  color: #fff;
+}
+
+header {
+  font-size: 30px;
+  margin: 0 0 30px 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+h3 {
+  position: relative;
+}
+.title {
+  font-weight: 700;
+}
+
+.subtitle {
+  position: absolute;
+  bottom: 5px;
+  left: 215px;
+  font-size: 19px;
+  font-weight: 300;
+  color: #acacac;
+}
+
+.header-icon {
+  font-weight: 300;
+  align-self: center;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.input-field {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 26px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-button {
+  padding: 10px 30px;
+  font-family: inherit;
+  width: 40%;
+  border-radius: 10px;
+  border: none;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.output-container {
+  background-color: #fff;
+  padding: 35px 25px;
+  border-radius: 0 0 30px 30px;
+}
+
+.result-box {
+  background-color: #acacac;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 15px;
+}
+.output-container .result-box:last-child {
+  margin-bottom: 0;
+}
