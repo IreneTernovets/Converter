@@ -13,24 +13,36 @@ const MASS_EL = document.getElementById("mass-box");
 let inputValue;
 
 CONVERT_BTN.addEventListener("click", function () {
-  inputValue = INPUT_EL.value;
-  LENGTH_EL.textContent = `${inputValue} meters = ${(
-    inputValue * 3.281
-  ).toFixed(3)} feet  |  ${inputValue} feet = ${(inputValue / 3.281).toFixed(
-    3
-  )} meters`;
+  inputValue = INPUT_EL.value.trim();
 
-  VOLUME_EL.textContent = `${inputValue} liters = ${(
-    inputValue * 0.264
-  ).toFixed(3)} gallons  |  ${inputValue} gallons = ${(
-    inputValue / 0.264
-  ).toFixed(3)} liters`;
+  if (inputValue === "") {
+    alert("Please enter a number.");
+    INPUT_EL.value = "";
+  } else if (isNaN(inputValue)) {
+    alert("Invalid input. Please enter a valid number.");
+    INPUT_EL.value = "";
+  } else if (parseFloat(inputValue) <= 0) {
+    alert("Invalid input. Please enter a positive number.");
+    INPUT_EL.value = "";
+  } else {
+    LENGTH_EL.textContent = `${inputValue} meters = ${(
+      inputValue * 3.281
+    ).toFixed(3)} feet  |  ${inputValue} feet = ${(inputValue / 3.281).toFixed(
+      3
+    )} meters`;
 
-  MASS_EL.textContent = `${inputValue} kilos = ${(inputValue * 2.204).toFixed(
-    3
-  )} pounds  |  ${inputValue} pounds = ${(inputValue / 2.204).toFixed(
-    3
-  )} kilos`;
+    VOLUME_EL.textContent = `${inputValue} liters = ${(
+      inputValue * 0.264
+    ).toFixed(3)} gallons  |  ${inputValue} gallons = ${(
+      inputValue / 0.264
+    ).toFixed(3)} liters`;
 
-  INPUT_EL.value = "";
+    MASS_EL.textContent = `${inputValue} kilos = ${(inputValue * 2.204).toFixed(
+      3
+    )} pounds  |  ${inputValue} pounds = ${(inputValue / 2.204).toFixed(
+      3
+    )} kilos`;
+
+    INPUT_EL.value = "";
+  }
 });
